@@ -14,12 +14,28 @@ end
 
 def find_the_cheese(ingredients)
   cheese_types = ["cheddar", "gouda", "camembert"]
-  if ingredients.include?(cheese_types[0])
-    cheese_types[0]
-  elsif ingredients.include?(cheese_types[1])
-    cheese_types[1]
-  elsif ingredients.include?(cheese_types[2])
-    cheese_types[2]
+  cheese_types.each do |cheese|
+    if ingredients.include?(cheese)
+      cheese
+    else
+      nil
+    end
+  end
+
+#  if ingredients.include?(cheese_types[0])
+#    cheese_types[0]
+#  elsif ingredients.include?(cheese_types[1])
+#    cheese_types[1]
+#  elsif ingredients.include?(cheese_types[2])
+#    cheese_types[2]
+#  else
+#    nil
+#  end
+end
+
+cheese_types.each do |cheese|
+  if ingredients.include?(cheese)
+    cheese
   else
     nil
   end
